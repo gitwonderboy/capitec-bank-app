@@ -1,0 +1,18 @@
+.page-container {
+  background-image: url('~/asserts/img/curve.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.page-wrapper {
+  padding: 10px 14px;
+}
+
+.page-wrapper .carousel {
+  height: 400px;
+}
+
+.find-specialist {
+  background-color: #609f9f;
+}
