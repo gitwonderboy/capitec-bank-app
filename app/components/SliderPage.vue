@@ -1,7 +1,7 @@
 <template>
   <GridLayout rows="auto,auto" columns="*">
     <StackLayout row="0" class="carousel mt-0">
-      <Image class="rounded-b-xl" src="~/asserts/img/hello.png" stretch="aspectFill" />
+      <Image class="rounded-b-2xl" src="~/asserts/img/hello.png" stretch="aspectFill" />
     </StackLayout>
     <StackLayout row="1" class="carousel-bottoms px-1 mb-4 mt-6">
       <ScrollView
@@ -18,7 +18,7 @@
             class="bottom justify-center items-center rounded-full px-3 py-2 mr-1"
             @tap="viewProduct(item)"
           >
-            <Image class="bottom-icon rounded-full h-10 w-10 mr-2" :src="item.img" />
+            <Image class="bottom-icon rounded-full h-8 w-8 mr-2" :src="item.img" />
             <Label
               :text="item.name"
               textWrap="true"
@@ -37,7 +37,11 @@ export default {
     return {
       ViewPage: ViewPage,
       slider: [
-        { name: "Buy Prepaid Mobile", price: 12.0, img: "~/asserts/img/3.png" },
+        {
+          name: "Buy Prepaid Mobile",
+          price: 12.0,
+          img: "~/asserts/img/buyprepaidmobile.png",
+        },
         { name: "Buy Electricity", price: 15.0, img: "~/asserts/img/2.png" },
         { name: "Pay Beneficiary", price: 20.0, img: "~/asserts/img/4.png" },
         { name: "Transfer Money", price: 15.0, img: "~/asserts/img/muffin.png" },

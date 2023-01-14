@@ -11,7 +11,7 @@
 
     <StackLayout class="page-container">
       <SliderPage />
-      <StackLayout class="w-full px-2 mt-4">
+      <StackLayout class="w-full mt-4">
         <GridLayout rows="auto" columns="auto, *">
           <Label class="key-icon fas text-xl pl-3 mt-5" col="0" text.decode="&#xf023;" />
           <TextField col="1" :text="pin" hint="Remote PIN" class="text-lg mt-2" />
@@ -19,19 +19,29 @@
         <StackLayout class="mt-5">
           <Button
             text="SIGN IN"
-            class="bg-blue-500 text-lg text-white font-bold rounded-2xl"
+            class="bg-blue-500 text-lg text-white font-bold rounded-xl"
+            @tap="onNavigationItemTap(HomePage)"
           ></Button>
         </StackLayout>
-        <FlexboxLayout class="justify-end items-end">
-          <Label text="Forgot Password" textWrap="true" class="text-lg font-bold mr-4" />
-        </FlexboxLayout>
+        <GridLayout rows="auto" columns="*,*" class="mt-2">
+          <FlexboxLayout col="0" class="justify-start items-start">
+            <Label text="Switch Account" textWrap="true" class="text-sm font-bold ml-4" />
+          </FlexboxLayout>
+          <FlexboxLayout col="1" class="justify-end items-end">
+            <Label
+              text="Forgot Password"
+              textWrap="true"
+              class="text-sm font-bold mr-4"
+            />
+          </FlexboxLayout>
+        </GridLayout>
       </StackLayout>
     </StackLayout>
   </Page>
 </template>
 
 <script>
-import HeadPage from "./HeadPage";
+import HomePage from "./HomePage";
 import SliderPage from "./SliderPage";
 
 export default {
@@ -39,7 +49,7 @@ export default {
     return {
       pin: "",
       currentPage: "Global One",
-      HeadPage: HeadPage,
+      HomePage: HomePage,
     };
   },
 
@@ -59,7 +69,7 @@ export default {
   },
 
   components: {
-    HeadPage,
+    HomePage,
     SliderPage,
   },
 };
