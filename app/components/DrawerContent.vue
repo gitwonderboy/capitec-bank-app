@@ -1,22 +1,18 @@
 <template class="drawer" lang="html">
   <GridLayout rows="*, auto">
     <StackLayout row="1">
-      <StackLayout class="shop-stops mb-2 mt-2">
-        <GridLayout columns="auto,*" rows="60" class="bottoms">
-          <FlexboxLayout col="1" class="shop-stop justify-start items-center">
-            <Label text="100% " class="stop-title-percent text-xl font-bold" />
-            <Label text="COFFEE" class="stop-title text-xl font-bold" />
-          </FlexboxLayout>
-          <FlexboxLayout col="0" class="stop justify-start items-center">
+      <StackLayout>
+        <GridLayout columns="*" rows="50" class="bottoms">
+          <FlexboxLayout col="0" class="justify-start items-center">
             <StackLayout class="p-1">
-              <Image src="~/asserts/img/latte-art.png" class="stop-img w-14 h-14" />
+              <Image src="~/asserts/img/capitec-log.png" class="capitec-logo ml-2 w-36" />
             </StackLayout>
           </FlexboxLayout>
         </GridLayout>
       </StackLayout>
 
       <StackLayout class="size-buttons mb-2 p-2">
-        <GridLayout columns="*,*,*" rows="50" class="bottoms">
+        <GridLayout columns="*,*,*" rows="40" class="bottoms">
           <FlexboxLayout
             col="0"
             class="size-button justify-center items-center rounded-xl mr-1"
@@ -38,7 +34,10 @@
             class="size-button justify-center items-center rounded-xl"
           >
             <StackLayout>
-              <Label text="Menu" class="button-title text-gray-100 text-lg font-bold" />
+              <Label
+                text="Sign Out"
+                class="button-title text-gray-100 text-lg font-bold"
+              />
             </StackLayout>
           </FlexboxLayout>
         </GridLayout>
@@ -51,12 +50,12 @@
           </StackLayout>
           <StackLayout col="1" class="ml-4">
             <Label
-              text="Wonderboy"
+              text="Mr WT Mthiyane"
               class="card-title text-lg font-bold uppercase text-white"
             />
             <Label
               textWrap="true"
-              text="wonderboy@gmail.com"
+              text="1560031240"
               class="card-title text-sm text-white"
             />
           </StackLayout>
@@ -72,7 +71,7 @@
           @tap="onNavigationItemTap(HomePage)"
         >
           <Label col="0" text.decode="&#xf015;" class="w-10 nt-icon fas text-xl" />
-          <Label col="1" text="BBC" class="p-l-10 font-bold text-base" />
+          <Label col="1" text="CAPITEC" class="p-l-10 font-bold text-base" />
         </GridLayout>
 
         <GridLayout
@@ -81,8 +80,46 @@
           @tap="onNavigationItemTap(AboutPage)"
         >
           <Label col="0" text.decode="&#xf044;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="ABOUT US" class="p-l-10 font-bold text-base" />
+          <Label col="1" text="Buy Electricity" class="p-l-10 font-bold text-base" />
         </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="pl-4 py-4"
+          @tap="onNavigationItemTap(OfferPage)"
+        >
+          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
+          <Label col="1" text="Pay Beneficiary" class="p-l-10 font-bold text-base" />
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="pl-4 py-4"
+          @tap="onNavigationItemTap(OfferPage)"
+        >
+          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
+          <Label col="1" text="Transfer Money" class="p-l-10 font-bold text-base" />
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="pl-4 py-4"
+          @tap="onNavigationItemTap(OfferPage)"
+        >
+          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
+          <Label col="1" text="Track Money" class="p-l-10 font-bold text-base" />
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="pl-4 py-4"
+          @tap="onNavigationItemTap(OfferPage)"
+        >
+          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
+          <Label col="1" text="Send Cash" class="p-l-10 font-bold text-base" />
+        </GridLayout>
+
+        <StackLayout class="hr" />
 
         <GridLayout
           columns="auto, *"
@@ -93,40 +130,14 @@
           <Label col="1" text="FIND US" class="p-l-10 font-bold text-base" />
         </GridLayout>
 
-        <!-- <GridLayout columns="auto, *" :class="
-            'nt-drawer__list-item' + (selectedPage === 'MenuPage' ? ' -selected' : '')
-          " @tap="onNavigationItemTap(MenuPage)">
-          <Label col="0" text.decode="&#xf4c4;" class="nt-icon fas" />
-          <Label col="1" text="MENU" class="p-r-10 font-bold text-sm" />
-        </GridLayout> -->
-
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(OfferPage)"
-        >
-          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="OFFERS" class="p-l-10 font-bold text-base" />
-        </GridLayout>
-        <StackLayout class="hr" />
-
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(AttachmentPage)"
-        >
-          <Label col="0" text.decode="&#xf0c6;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="ATTACHMENTS" class="p-l-10 font-bold text-base" />
-        </GridLayout>
-
         <GridLayout columns="auto, *" class="pl-4 py-4" @tap="onNavigationItemTap(Tip)">
           <Label col="0" text.decode="&#xf129;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="BBC TIPS" class="p-l-10 font-bold text-base" />
+          <Label col="1" text="BANKING TIPS" class="p-l-10 font-bold text-base" />
         </GridLayout>
 
         <GridLayout columns="auto, *" class="pl-4 py-2" @tap="onNavigationItemTap(Faq)">
           <Label col="0" text.decode="&#xf086;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="BBC FAQS" class="p-l-10 font-bold text-base" />
+          <Label col="1" text="CAPITEC FAQS" class="p-l-10 font-bold text-base" />
         </GridLayout>
       </StackLayout>
     </ScrollView>
@@ -182,21 +193,14 @@ export default {
 
 <style scoped lang="css">
 .size-button {
-  background-image: linear-gradient(135deg, #000000 0%, #241c1c 100%);
+  background: rgb(30, 129, 176);
+  background: linear-gradient(180deg, rgba(30, 129, 176, 1) 13%, rgba(0, 72, 109, 1) 73%);
 }
 .user-icon {
-  background-color: #271703;
+  background-color: #009de0;
 }
 
 .nt-icon {
-  color: #4d2f07;
-}
-
-.stop-title {
-  color: #4d2f07;
-}
-
-.stop-title-percent {
-  color: #969595;
+  color: #1e81b0;
 }
 </style>

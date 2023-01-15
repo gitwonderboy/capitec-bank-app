@@ -14,7 +14,14 @@
       <StackLayout class="w-full mt-4">
         <GridLayout rows="auto" columns="auto, *">
           <Label class="key-icon fas text-xl pl-3 mt-5" col="0" text.decode="&#xf023;" />
-          <TextField col="1" :text="pin" hint="Remote PIN" class="text-lg mt-2" />
+          <TextField
+            col="1"
+            secure="true"
+            keyboardType="number"
+            :text="pin"
+            hint="Remote PIN"
+            class="text-lg mt-2"
+          />
         </GridLayout>
         <StackLayout class="mt-5">
           <Button

@@ -1,161 +1,119 @@
 <template>
-  <Page class="page">
+  <Page class="page view">
     <ActionBar :currentPage="currentPage" />
-    <StackLayout class="page-container">
-      <ScrollView
-        orientation="vertical"
-        height="750"
-        class="scroll-view"
-        scrollBarIndicatorVisible="false"
-      >
-        <StackLayout class="page-wrapper" justifyContent="center" alignItems="center">
-          <SliderPage />
-
-          <StackLayout class="container" @tap="onNavigationItemTap(OfferPage)">
-            <GridLayout
-              columns="auto,*"
-              rows="130"
-              class="make-coffee-modal bg-gray-100 mb-4 mt-2 rounded-xl"
-            >
+    <StackLayout class="page-container bg-white">
+      <ScrollView orientation="vertical Session" height="750">
+        <GridLayout columns="*" rows="*, auto" class="view-page-wrapper">
+          <StackLayout row="0" col="0">
+            <StackLayout class="carousel-bottoms mt-6">
               <Image
-                col="0"
-                class="make-coffee-modal-img rounded-tl-xl rounded-bl-xl"
-                src="~/asserts/img/coffee-making.png"
+                class="carousel-img w-60"
+                src="~/asserts/img/capitec-card.png"
+                stretch="aspectFill"
               />
-              <FlexboxLayout col="1" class="justify-center items-center">
-                <StackLayout>
-                  <Label
-                    textWrap="true"
-                    text="30% Off"
-                    class="font-bold text-lg text-gray-200 leading-none"
-                  />
-                  <Label
-                    textWrap="true"
-                    text="The Eid Offer"
-                    class="font-bold text-lg text-gray-200 leading-none"
-                  />
-                  <Label
-                    textWrap="true"
-                    text="Buy Now"
-                    class="make-coffee-modal-btn font-bold mt-4 bg-white rounded-full p-2 text-center text-base leading-none"
-                  />
-                </StackLayout>
-              </FlexboxLayout>
-            </GridLayout>
 
-            <GridLayout columns="*, *" rows="auto" class="card-container mb-4">
-              <FlexboxLayout
-                class="coffee-card-container justify-center items-center rounded-lg mr-1"
-                row="0"
-                col="0"
-                @tap="onNavigationItemTap(ViewPage)"
-              >
-                <StackLayout class="coffee-card">
-                  <Image
-                    class="card-icon rounded-t-lg"
-                    src="~/asserts/img/gallery-1.png"
-                  />
-                  <StackLayout class="p-4">
-                    <Label
-                      text="Cappuccino"
-                      class="card-title text-lg font-bold text-gray-200"
-                    />
-                    <Label
-                      text="With Chocolate"
-                      class="card-desc text-base text-gray-400"
-                    />
-                    <GridLayout columns="*,*">
-                      <FlexboxLayout col="0" class="justify-start">
+              <FlexboxLayout class="bottoms bg-slate-200 rounded-t-3xl">
+                <GridLayout columns="*,*" rows="150" class="bottom">
+                  <FlexboxLayout col="0" class="bottom justify-start items-center ml-4">
+                    <StackLayout>
+                      <Label
+                        class="bottom-title text-xl text-black font-bold uppercase"
+                      />
+                      <Label
+                        text="With Chocolate"
+                        class="bottom-title-caption text-black text-base font-bold"
+                      />
+                      <FlexboxLayout class="justify-end items-center">
                         <Label
-                          text="R 28.90"
-                          class="card-title text-base font-bold text-gray-200"
+                          text.decode="&#xf005;"
+                          class="nt-icon mr-1 fas text-sm text-center text-orange-400"
+                        />
+                        <Label text="4.5" class="text-black text-center mr-1 text-base" />
+                        <Label
+                          text="(2343 Reviews)"
+                          class="text-gray-400 text-center text-base"
                         />
                       </FlexboxLayout>
-                      <FlexboxLayout col="1" class="justify-end">
-                        <Label
-                          text.decode="&#xf217;"
-                          class="nt-icon fas text-xl text-white"
-                        />
-                      </FlexboxLayout>
-                    </GridLayout>
+                    </StackLayout>
+                  </FlexboxLayout>
+                  <FlexboxLayout
+                    col="1"
+                    class="bottom-controls justify-center items-center"
+                  >
+                    <Label
+                      text="-"
+                      class="text-white text-2xl text-center rounded-md w-8 h-8 control font-extrabold"
+                      textWrap="true"
+                    />
+                    <Label
+                      class="text-black text-2xl mx-2 text-center w-8 h-8 font-extrabold"
+                      textWrap="true"
+                    />
+                    <Label
+                      text="+"
+                      class="text-white text-2xl text-center rounded-md w-8 h-8 control font-extrabold"
+                      textWrap="true"
+                    />
+                  </FlexboxLayout>
+                </GridLayout>
+              </FlexboxLayout>
+
+              <FlexboxLayout class="bottoms-description bg-slate-400 rounded-tr-3xl">
+                <FlexboxLayout class="bottom justify-start items-center ml-4">
+                  <StackLayout class="coffee-desc">
+                    <Label
+                      textWrap="true"
+                      text="A cappuccino is an espresso-based coffee drink that originated in Austria with later development."
+                      class="bottom-title text-lg text-black mt-2 font-bold leading-none"
+                    />
+                    <Label
+                      text="Read more..."
+                      class="bottom-description-title text-black text-lg font-bold my-2"
+                    />
                   </StackLayout>
-                </StackLayout>
+                </FlexboxLayout>
               </FlexboxLayout>
+            </StackLayout>
 
-              <FlexboxLayout
-                class="coffee-card-container justify-center items-center rounded-lg ml-1"
-                row="0"
-                col="1"
-                @tap="onNavigationItemTap(ViewPage)"
-              >
-                <StackLayout class="coffee-card">
-                  <Image
-                    class="card-icon rounded-t-lg"
-                    src="~/asserts/img/gallery-2.png"
-                  />
-                  <StackLayout class="p-4">
+            <StackLayout row="1" class="size-buttons p-2">
+              <GridLayout columns="*,*,*" rows="50" class="bottoms">
+                <FlexboxLayout
+                  col="0"
+                  class="size-button justify-center items-center rounded-xl mr-1"
+                >
+                  <StackLayout>
                     <Label
-                      text="Cappuccino"
-                      class="card-title text-lg font-bold text-gray-200"
+                      text="S"
+                      class="button-title text-gray-100 text-xl font-bold"
                     />
-                    <Label
-                      text="With Oat Milk"
-                      class="card-desc text-base text-gray-400"
-                    />
-                    <GridLayout columns="*,*">
-                      <FlexboxLayout col="0" class="justify-start">
-                        <Label
-                          text="R 28.90"
-                          class="card-title text-base font-bold text-gray-200"
-                        />
-                      </FlexboxLayout>
-                      <FlexboxLayout col="1" class="justify-end">
-                        <Label
-                          text.decode="&#xf217;"
-                          class="nt-icon fas text-xl text-white"
-                        />
-                      </FlexboxLayout>
-                    </GridLayout>
                   </StackLayout>
-                </StackLayout>
-              </FlexboxLayout>
-            </GridLayout>
-
-            <GridLayout
-              columns="*,auto"
-              rows="140"
-              class="bbc-modal bg-gradient-to-b from-gray-100 via-slate-100 to-slate-100 mb-4 rounded-lg"
-            >
-              <FlexboxLayout col="0" class="justify-center items-center">
-                <StackLayout class="p-4">
-                  <Label
-                    textWrap="true"
-                    text="100% Coffee Shared With Love."
-                    class="font-bold text-xl leading-none text-black"
-                  />
-                  <Label
-                    textWrap="true"
-                    text="BREW BROTHERS CAFÉ"
-                    class="bbc-modal-title font-bold tracking-wide text-lg font-sana leading-none"
-                  />
-                </StackLayout>
-              </FlexboxLayout>
-              <Image
-                col="1"
-                class="bbc-modal-img rounded-full"
-                src="~/asserts/img/share-coffee.png"
-              />
-            </GridLayout>
-
-            <GridLayout columns="*" rows="*" class="bbc-modal mb-4 rounded-lg">
-              <Image
-                col="0"
-                class="bbc-modal-img rounded-lg"
-                src="~/asserts/img/cup-cake.png"
-              />
-            </GridLayout>
+                </FlexboxLayout>
+                <FlexboxLayout
+                  col="1"
+                  class="size-button justify-center items-center rounded-xl mr-1"
+                >
+                  <StackLayout>
+                    <Label
+                      text="M"
+                      class="button-title text-gray-100 text-xl font-bold"
+                    />
+                  </StackLayout>
+                </FlexboxLayout>
+                <FlexboxLayout
+                  col="2"
+                  class="size-button justify-center items-center rounded-xl"
+                >
+                  <StackLayout>
+                    <Label
+                      text="L"
+                      class="button-title text-gray-100 text-xl font-bold"
+                    />
+                  </StackLayout>
+                </FlexboxLayout>
+              </GridLayout>
+            </StackLayout>
           </StackLayout>
-        </StackLayout>
+        </GridLayout>
       </ScrollView>
     </StackLayout>
   </Page>
@@ -174,7 +132,7 @@ import SliderPage from "./SliderPage";
 export default {
   data() {
     return {
-      currentPage: "BBC",
+      currentPage: "Capitec",
       AboutPage: AboutPage,
       Branch: Branch,
       AttachmentPage: AttachmentPage,
@@ -212,47 +170,39 @@ export default {
 </script>
 
 <style scoped lang="css">
-.scroll-view {
-  background-image: url("~/asserts/img/coffee_bg.png");
-  background-repeat: no-repeat;
-  background-size: 100% 65%;
+.carousel-bottoms .bottoms {
+  margin-top: -250px;
 }
 
-.ratings .ratings-container .rating {
-  background-color: #1e81b0;
+.carousel-bottoms .bottoms-description {
+  margin-top: -40px;
 }
 
-.make-coffee-modal {
-  background: rgb(62, 43, 14);
-  background: linear-gradient(130deg, rgba(62, 43, 14, 1) 42%, rgba(84, 51, 8, 1) 69%);
-}
-
-.make-coffee-modal-btn {
-  color: #93691d;
-}
-.bbc-modal-title {
+.bottom-description-title {
   color: #543308;
 }
-.container {
-  padding: 10px 5px;
+
+.bottom-title-caption {
+  color: hsl(34, 63%, 32%);
 }
 
-.card-container .card {
-  margin-bottom: 10px;
+.size-button {
+  background: rgb(48, 30, 12);
+  background: linear-gradient(130deg, rgba(48, 30, 12, 1) 10%, rgba(54, 41, 26, 1) 100%);
+}
+.checkout-button-title {
+  color: rgb(48, 30, 12);
 }
 
-.quick-menu-container .quick-menu {
-  background-color: #1e81b0;
-}
-.ratings .rating-icon {
-  font-size: 15px;
+.checkout-buttons {
+  background-color: #1d1a1a;
 }
 
-.ratings .rating-title {
-  font-size: 10px;
+.bottom-controls .control {
+  background-color: #543308;
 }
-
-.coffee-card-container {
-  background-image: linear-gradient(135deg, #2b2b2b 0%, #121212 100%);
+.checkout-title {
+  font-weight: 700;
+  color: #ffffff;
 }
 </style>
