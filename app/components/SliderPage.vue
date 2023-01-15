@@ -16,9 +16,8 @@
             :key="index"
             col="0"
             class="bottom justify-center items-center rounded-full px-3 py-2 mr-1"
-            @tap="viewProduct(item)"
           >
-            <Image class="bottom-icon rounded-full h-8 w-8 mr-2" :src="item.img" />
+            <Image class="bottom-icon rounded-full h-8 w-8 p-1 mr-2" :src="item.img" />
             <Label
               :text="item.name"
               textWrap="true"
@@ -31,41 +30,22 @@
   </GridLayout>
 </template>
 <script>
-import ViewPage from "./ViewPage";
 export default {
   data() {
     return {
-      ViewPage: ViewPage,
       slider: [
         {
           name: "Buy Prepaid Mobile",
           price: 12.0,
-          img: "~/asserts/img/buyprepaidmobile.png",
+          img: "~/asserts/img/prepaid.png",
         },
-        { name: "Buy Electricity", price: 15.0, img: "~/asserts/img/2.png" },
-        { name: "Pay Beneficiary", price: 20.0, img: "~/asserts/img/4.png" },
-        { name: "Transfer Money", price: 15.0, img: "~/asserts/img/muffin.png" },
-        { name: "Track Money", price: 15.0, img: "~/asserts/img/6.png" },
-        { name: "Send Cash", price: 27.0, img: "~/asserts/img/1.png" },
+        { name: "Buy Electricity", price: 15.0, img: "~/asserts/img/buy.png" },
+        { name: "Pay Beneficiary", price: 20.0, img: "~/asserts/img/pay.png" },
+        { name: "Transfer Money", price: 15.0, img: "~/asserts/img/transfer.png" },
+        { name: "Track Money", price: 15.0, img: "~/asserts/img/track.png" },
+        { name: "Send Cash", price: 27.0, img: "~/asserts/img/send.png" },
       ],
     };
-  },
-  methods: {
-    onNavigationItemTap(component) {
-      this.$navigateTo(component, {
-        clearHistory: false,
-      });
-    },
-
-    viewProduct(item) {
-      this.$navigateTo(ViewPage, {
-        props: { item: item },
-        clearHistory: false,
-      });
-    },
-  },
-  components: {
-    ViewPage,
   },
 };
 </script>

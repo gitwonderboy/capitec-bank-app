@@ -65,58 +65,44 @@
 
     <ScrollView row="0" class="page-scroller nt-drawer__body">
       <StackLayout class="bg-slate-100">
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(HomePage)"
-        >
-          <Label col="0" text.decode="&#xf015;" class="w-10 nt-icon fas text-xl" />
-          <Label col="1" text="CAPITEC" class="p-l-10 font-bold text-base" />
+        <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
+          <Image
+            col="0"
+            class="w-7"
+            src="~/asserts/img/cap-logo.png"
+            stretch="aspectFill"
+          />
+          <Label col="1" text="Home" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(AboutPage)"
-        >
-          <Label col="0" text.decode="&#xf044;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="Buy Electricity" class="p-l-10 font-bold text-base" />
+        <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
+          <Image col="0" class="w-7" src="~/asserts/img/buy.png" stretch="aspectFill" />
+          <Label col="1" text="Buy Electricity" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(OfferPage)"
-        >
-          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="Pay Beneficiary" class="p-l-10 font-bold text-base" />
+        <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
+          <Image col="0" class="w-7" src="~/asserts/img/pay.png" stretch="aspectFill" />
+          <Label col="1" text="Pay Beneficiary" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(OfferPage)"
-        >
-          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="Transfer Money" class="p-l-10 font-bold text-base" />
+        <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
+          <Image
+            col="0"
+            class="w-7"
+            src="~/asserts/img/transfer.png"
+            stretch="aspectFill"
+          />
+          <Label col="1" text="Transfer Money" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(OfferPage)"
-        >
-          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="Track Money" class="p-l-10 font-bold text-base" />
+        <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
+          <Image col="0" class="w-7" src="~/asserts/img/track.png" stretch="aspectFill" />
+          <Label col="1" text="Track Money" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
-        <GridLayout
-          columns="auto, *"
-          class="pl-4 py-4"
-          @tap="onNavigationItemTap(OfferPage)"
-        >
-          <Label col="0" text.decode="&#xf06b;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="Send Cash" class="p-l-10 font-bold text-base" />
+        <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
+          <Image col="0" class="w-7" src="~/asserts/img/send.png" stretch="aspectFill" />
+          <Label col="1" text="Send Cash" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
         <StackLayout class="hr" />
@@ -127,17 +113,17 @@
           @tap="onNavigationItemTap(Branch)"
         >
           <Label col="0" text.decode="&#xf3c5;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="FIND US" class="p-l-10 font-bold text-base" />
+          <Label col="1" text="Find Us" class="p-l-10 font-bold text-base" />
         </GridLayout>
 
         <GridLayout columns="auto, *" class="pl-4 py-4" @tap="onNavigationItemTap(Tip)">
           <Label col="0" text.decode="&#xf129;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="BANKING TIPS" class="p-l-10 font-bold text-base" />
+          <Label col="1" text="Banking TIPS" class="p-l-10 font-bold text-base" />
         </GridLayout>
 
         <GridLayout columns="auto, *" class="pl-4 py-2" @tap="onNavigationItemTap(Faq)">
           <Label col="0" text.decode="&#xf086;" class="w-10 nt-icon fas text-lg" />
-          <Label col="1" text="CAPITEC FAQS" class="p-l-10 font-bold text-base" />
+          <Label col="1" text="Capitec FAQS" class="p-l-10 font-bold text-base" />
         </GridLayout>
       </StackLayout>
     </ScrollView>
@@ -146,13 +132,9 @@
 
 <script>
 import HomePage from "./HomePage";
-import AboutPage from "./AboutPage";
 import Branch from "./BranchPage";
-import AttachmentPage from "./AttachmentPage";
-import OfferPage from "./OfferPage";
 import Tip from "./TipPage";
 import Faq from "./FaqPage";
-import MenuPage from "./MenuPage";
 
 import * as utils from "~/shared/utils";
 
@@ -160,25 +142,17 @@ export default {
   data() {
     return {
       HomePage: HomePage,
-      AboutPage: AboutPage,
       Branch: Branch,
-      AttachmentPage: AttachmentPage,
-      OfferPage: OfferPage,
       Tip: Tip,
       Faq: Faq,
-      MenuPage: MenuPage,
       selectedPage: "",
     };
   },
   components: {
     HomePage,
-    AboutPage,
     Branch,
-    AttachmentPage,
-    OfferPage,
     Tip,
     Faq,
-    MenuPage,
   },
   methods: {
     onNavigationItemTap(component) {
@@ -197,10 +171,11 @@ export default {
   background: linear-gradient(180deg, rgba(30, 129, 176, 1) 13%, rgba(0, 72, 109, 1) 73%);
 }
 .user-icon {
-  background-color: #009de0;
+  background: rgb(30, 129, 176);
+  background: linear-gradient(0deg, rgba(30, 129, 176, 1) 52%, rgba(0, 157, 224, 1) 97%);
 }
 
 .nt-icon {
-  color: #1e81b0;
+  color: #00486d;
 }
 </style>

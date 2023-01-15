@@ -18,6 +18,7 @@
             col="1"
             secure="true"
             keyboardType="number"
+            maxLength="4"
             :text="pin"
             hint="Remote PIN"
             class="text-lg mt-2"

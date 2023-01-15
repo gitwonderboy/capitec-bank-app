@@ -121,11 +121,7 @@
 
 <script>
 import ActionBar from "./ActionBar";
-import AboutPage from "./AboutPage";
 import Branch from "./BranchPage";
-import AttachmentPage from "./AttachmentPage";
-import OfferPage from "./OfferPage";
-import MenuPage from "./MenuPage";
 import TipFaq from "./TipFaqPage";
 import SliderPage from "./SliderPage";
 
@@ -133,11 +129,8 @@ export default {
   data() {
     return {
       currentPage: "Capitec",
-      AboutPage: AboutPage,
       Branch: Branch,
-      AttachmentPage: AttachmentPage,
-      OfferPage: OfferPage,
-      MenuPage: MenuPage,
+      TipFaq: TipFaq,
     };
   },
 
@@ -158,11 +151,7 @@ export default {
 
   components: {
     ActionBar,
-    AboutPage,
     Branch,
-    AttachmentPage,
-    OfferPage,
-    MenuPage,
     TipFaq,
     SliderPage,
   },
