@@ -64,14 +64,7 @@ export default {
   methods: {
     onNavigationItemTap(component) {
       this.$navigateTo(component, {
-        clearHistory: false,
-      });
-    },
-
-    viewProduct(item) {
-      this.$navigateTo(ViewPage, {
-        props: { item: item },
-        clearHistory: false,
+        clearHistory: true,
       });
     },
   },
@@ -96,17 +89,6 @@ export default {
   background-color: #1e81b0;
 }
 
-.make-coffee-modal {
-  background: rgb(62, 43, 14);
-  background: linear-gradient(130deg, rgba(62, 43, 14, 1) 42%, rgba(84, 51, 8, 1) 69%);
-}
-
-.make-coffee-modal-btn {
-  color: #93691d;
-}
-.bbc-modal-title {
-  color: #543308;
-}
 .container {
   padding: 10px 5px;
 }
