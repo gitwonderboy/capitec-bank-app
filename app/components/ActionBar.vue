@@ -10,29 +10,24 @@
           class="action-bar-icon text-blue-400 fas text-xl mr-2"
           col="1"
           text.decode="&#xf002;"
-          @tap="onDrawerButtonTap"
         />
       </GridLayout>
 
-      <GridLayout columns="*, *, *, *, *" class="mt-2">
+      <GridLayout columns="*, *, *" class="mt-2">
         <FlexboxLayout
           col="0"
           class="justify-center items-center"
           @tap="onNavigationItemTap(activeNav)"
         >
-          <Label text.decode="&#xf015;" :class="inactive" />
+          <StackLayout
+            class="inactive-icon fas text-blue-400 mt-3 text-center text-xl font-extrabold"
+          >
+            <Image class="capiteclogo w-6" src="~/asserts/img/user.png" />
+          </StackLayout>
         </FlexboxLayout>
 
         <FlexboxLayout
           col="1"
-          class="justify-center items-center"
-          @tap="onNavigationItemTap(activeNav)"
-        >
-          <Label text.decode="&#xf271;" :class="inactive" />
-        </FlexboxLayout>
-
-        <FlexboxLayout
-          col="2"
           class="justify-center items-center"
           @tap="onNavigationItemTap(activeNav)"
         >
@@ -42,19 +37,19 @@
         </FlexboxLayout>
 
         <FlexboxLayout
-          col="3"
+          col="2"
           class="justify-center items-center"
           @tap="onNavigationItemTap(activeNav)"
         >
-          <Label text.decode="&#xf0f0;" :class="inactive" />
-        </FlexboxLayout>
-
-        <FlexboxLayout
-          col="4"
-          class="justify-center items-center"
-          @tap="onNavigationItemTap(activeNav)"
-        >
-          <Label text.decode="&#xf0f0;" :class="inactive" />
+          <StackLayout
+            class="inactive-icon fas text-blue-400 mt-3 text-center text-xl font-extrabold"
+          >
+            <Image
+              @tap="onDrawerButtonTap"
+              class="capiteclogo w-5"
+              src="~/asserts/img/dashboard.png"
+            />
+          </StackLayout>
         </FlexboxLayout>
       </GridLayout>
     </StackLayout>
