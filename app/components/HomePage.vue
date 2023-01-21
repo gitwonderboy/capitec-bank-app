@@ -11,89 +11,30 @@
           />
 
           <StackLayout class="bottoms rounded-t-3xl rounded-b-3xl p-2">
-            <ScrollView row="0" orientation="vertical Session" height="200">
+            <ScrollView row="0" orientation="vertical Session" height="210">
               <StackLayout>
                 <GridLayout
+                  v-for="(item, index) in accounts"
+                  :key="index"
                   columns="230,*"
                   rows="100"
-                  class="bottom bg-white rounded-t-3xl rounded-b-3xl"
+                  :class="item.wrapper"
                 >
                   <FlexboxLayout col="0" class="bottom items-center ml-5">
                     <Image
                       class="livebetter w-10 h-10 mr-2"
-                      src="~/asserts/img/savings.png"
+                      :src="item.image"
                       stretch="aspectFill"
                     />
                     <StackLayout>
-                      <Label
-                        text="Savings Account"
-                        class="bottom-title text-base text-blue-500 font-extrabold"
-                      />
+                      <Label :text="item.name" :class="item.style" />
                       <Label text="Account Balance" class="text-gray-600 text-base" />
                     </StackLayout>
                   </FlexboxLayout>
 
                   <FlexboxLayout col="1" class="bottom-controls items-center">
                     <Label
-                      text="R 150.50"
-                      class="text-black text-lg font-bold"
-                      textWrap="true"
-                    />
-                  </FlexboxLayout>
-                </GridLayout>
-
-                <GridLayout
-                  columns="230,*"
-                  rows="100"
-                  class="bottom bg-white rounded-t-3xl rounded-b-3xl mt-2"
-                >
-                  <FlexboxLayout col="0" class="bottom items-center ml-5">
-                    <Image
-                      class="livebetter w-10 h-10 mr-2"
-                      src="~/asserts/img/livebetter.png"
-                      stretch="aspectFill"
-                    />
-                    <StackLayout>
-                      <Label
-                        text="Live Better Account"
-                        class="bottom-title text-base text-blue-700 font-extrabold"
-                      />
-                      <Label text="Account Balance" class="text-gray-600 text-base" />
-                    </StackLayout>
-                  </FlexboxLayout>
-
-                  <FlexboxLayout col="1" class="bottom-controls items-center">
-                    <Label
-                      text="R 1000.76"
-                      class="text-black text-lg font-bold"
-                      textWrap="true"
-                    />
-                  </FlexboxLayout>
-                </GridLayout>
-
-                <GridLayout
-                  columns="230,*"
-                  rows="100"
-                  class="bottom bg-white rounded-t-3xl rounded-b-3xl mt-2"
-                >
-                  <FlexboxLayout col="0" class="bottom items-center ml-5">
-                    <Image
-                      class="livebetter w-10 h-10 mr-2"
-                      src="~/asserts/img/credit.png"
-                      stretch="aspectFill"
-                    />
-                    <StackLayout>
-                      <Label
-                        text="Credit Card"
-                        class="bottom-title text-base text-blue-400 font-extrabold"
-                      />
-                      <Label text="Account Balance" class="text-gray-600 text-base" />
-                    </StackLayout>
-                  </FlexboxLayout>
-
-                  <FlexboxLayout col="1" class="bottom-controls items-center">
-                    <Label
-                      text="R 5050.10"
+                      :text="item.ballance"
                       class="text-black text-lg font-bold"
                       textWrap="true"
                     />
@@ -152,6 +93,29 @@ export default {
       currentPage: "Capitec",
       Branch: Branch,
       TipFaq: TipFaq,
+      accounts: [
+        {
+          name: "Savings Account",
+          image: "~/asserts/img/savings.png",
+          ballance: "R 150.50",
+          wrapper: "bottom bg-white rounded-t-3xl rounded-b-3xl",
+          style: "bottom-title text-base text-blue-500 font-extrabold",
+        },
+        {
+          name: "Live Better Account",
+          image: "~/asserts/img/livebetter.png",
+          ballance: "R 1000.76",
+          wrapper: "bottom bg-white rounded-t-3xl rounded-b-3xl mt-2",
+          style: "bottom-title text-base text-blue-700 font-extrabold",
+        },
+        {
+          name: "Credit Card",
+          image: "~/asserts/img/credit.png",
+          ballance: "R 5050.10",
+          wrapper: "bottom bg-white rounded-t-3xl rounded-b-3xl mt-2",
+          style: "bottom-title text-base text-blue-400 font-extrabold",
+        },
+      ],
     };
   },
 
