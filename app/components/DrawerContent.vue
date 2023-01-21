@@ -33,7 +33,7 @@
             col="2"
             class="size-button justify-center items-center rounded-xl"
           >
-            <StackLayout @tap="onLogoutTap(LoginPage)">
+            <StackLayout @tap="onLogoutTap()">
               <Label
                 text="Sign Out"
                 class="button-title text-gray-100 text-lg font-bold"
@@ -147,9 +147,9 @@ export default {
       Tip: Tip,
       Faq: Faq,
       LoginPage: LoginPage,
-      selectedPage: "",
     };
   },
+
   components: {
     HomePage,
     Branch,
@@ -157,6 +157,7 @@ export default {
     Faq,
     LoginPage,
   },
+
   methods: {
     onNavigationItemTap(component) {
       this.$navigateTo(component, {
@@ -165,8 +166,8 @@ export default {
       utils.closeDrawer();
     },
 
-    onLogoutTap(component) {
-      this.$navigateTo(component, {
+    onLogoutTap() {
+      this.$navigateTo(LoginPage, {
         clearHistory: true,
       });
       utils.closeDrawer();

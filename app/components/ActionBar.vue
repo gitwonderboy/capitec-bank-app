@@ -17,7 +17,7 @@
         <FlexboxLayout
           col="0"
           class="justify-center items-center"
-          @tap="onNavigationItemTap(activeNav)"
+          @tap="onNavigationItemTap"
         >
           <StackLayout
             class="inactive-icon fas text-blue-400 mt-3 text-center text-xl font-extrabold"
@@ -29,7 +29,7 @@
         <FlexboxLayout
           col="1"
           class="justify-center items-center"
-          @tap="onNavigationItemTap(activeNav)"
+          @tap="onNavigationItemTap"
         >
           <StackLayout :class="active">
             <Image class="capiteclogo w-9" src="~/asserts/img/cap-logo.png" />
@@ -39,16 +39,12 @@
         <FlexboxLayout
           col="2"
           class="justify-center items-center"
-          @tap="onNavigationItemTap(activeNav)"
+          @tap="onDrawerButtonTap"
         >
           <StackLayout
             class="inactive-icon fas text-blue-400 mt-3 text-center text-xl font-extrabold"
           >
-            <Image
-              @tap="onDrawerButtonTap"
-              class="capiteclogo w-5"
-              src="~/asserts/img/dashboard.png"
-            />
+            <Image class="capiteclogo w-5" src="~/asserts/img/dashboard.png" />
           </StackLayout>
         </FlexboxLayout>
       </GridLayout>
