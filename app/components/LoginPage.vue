@@ -24,11 +24,10 @@
             class="text-lg mt-2"
           />
         </GridLayout>
-        <StackLayout class="mt-5">
+        <StackLayout class="mt-5" @tap="onNavigationItemTap(HomePage)">
           <Button
             text="SIGN IN"
             class="bg-blue-500 text-lg text-white font-bold rounded-xl"
-            @tap="onNavigationItemTap(HomePage)"
           ></Button>
         </StackLayout>
         <GridLayout rows="auto" columns="*,*" class="mt-2">

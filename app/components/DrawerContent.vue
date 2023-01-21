@@ -1,4 +1,4 @@
-<template class="drawer" lang="html">
+<template class="drawer">
   <GridLayout rows="*, auto">
     <StackLayout row="1">
       <StackLayout>
@@ -33,7 +33,7 @@
             col="2"
             class="size-button justify-center items-center rounded-xl"
           >
-            <StackLayout>
+            <StackLayout @tap="onLogoutTap(LoginPage)">
               <Label
                 text="Sign Out"
                 class="button-title text-gray-100 text-lg font-bold"
@@ -88,7 +88,7 @@
         <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
           <Image
             col="0"
-            class="w-7"
+            class="w-5"
             src="~/asserts/img/transfer.png"
             stretch="aspectFill"
           />
@@ -96,12 +96,12 @@
         </GridLayout>
 
         <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
-          <Image col="0" class="w-7" src="~/asserts/img/track.png" stretch="aspectFill" />
+          <Image col="0" class="w-5" src="~/asserts/img/track.png" stretch="aspectFill" />
           <Label col="1" text="Track Money" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
         <GridLayout columns="50, *" class="py-3" @tap="onNavigationItemTap(HomePage)">
-          <Image col="0" class="w-7" src="~/asserts/img/send.png" stretch="aspectFill" />
+          <Image col="0" class="w-5" src="~/asserts/img/send.png" stretch="aspectFill" />
           <Label col="1" text="Send Cash" class="p-l-12 font-bold text-base" />
         </GridLayout>
 
@@ -135,6 +135,7 @@ import HomePage from "./HomePage";
 import Branch from "./BranchPage";
 import Tip from "./TipPage";
 import Faq from "./FaqPage";
+import LoginPage from "./LoginPage";
 
 import * as utils from "~/shared/utils";
 
@@ -145,6 +146,7 @@ export default {
       Branch: Branch,
       Tip: Tip,
       Faq: Faq,
+      LoginPage: LoginPage,
       selectedPage: "",
     };
   },
@@ -153,11 +155,19 @@ export default {
     Branch,
     Tip,
     Faq,
+    LoginPage,
   },
   methods: {
     onNavigationItemTap(component) {
       this.$navigateTo(component, {
         clearHistory: false,
+      });
+      utils.closeDrawer();
+    },
+
+    onLogoutTap(component) {
+      this.$navigateTo(component, {
+        clearHistory: true,
       });
       utils.closeDrawer();
     },

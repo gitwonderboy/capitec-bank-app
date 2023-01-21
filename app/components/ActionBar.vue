@@ -13,7 +13,7 @@
         />
       </GridLayout>
 
-      <GridLayout columns="*, *, *" class="mt-2">
+      <GridLayout columns="*, *, *">
         <FlexboxLayout
           col="0"
           class="justify-center items-center"

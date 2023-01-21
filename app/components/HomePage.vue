@@ -4,49 +4,67 @@
     <GridLayout rows="auto, *" columns="*">
       <ScrollView row="0" orientation="vertical Session" height="auto">
         <StackLayout class="home-page-container">
-          <StackLayout class="carousel-bottoms white">
+          <StackLayout class="carousel-bottoms white bg-white">
             <Image
               class="carousel-img w-60 mt-5"
               src="~/asserts/img/capitec-card.png"
               stretch="aspectFill"
             />
 
-            <StackLayout class="bottoms rounded-t-3xl">
-              <GridLayout columns="*,*" rows="100" class="bottom">
+            <StackLayout class="bottoms rounded-t-3xl rounded-b-3xl p-2">
+              <GridLayout
+                columns="230,*"
+                rows="100"
+                class="bottom bg-white rounded-t-3xl rounded-b-3xl"
+              >
                 <FlexboxLayout col="0" class="bottom items-center ml-5">
+                  <Image
+                    class="livebetter w-10 h-10 mr-2"
+                    src="~/asserts/img/savings.png"
+                    stretch="aspectFill"
+                  />
                   <StackLayout>
                     <Label
                       text="Savings Account"
-                      class="bottom-title text-base text-black font-extrabold uppercase"
+                      class="bottom-title text-base text-blue-500 font-extrabold"
                     />
-                    <Label text="Account Balance" class="text-gray-500 text-base" />
+                    <Label text="Account Balance" class="text-gray-600 text-base" />
                   </StackLayout>
                 </FlexboxLayout>
 
                 <FlexboxLayout col="1" class="bottom-controls items-center">
                   <Label
                     text="R 150.50"
-                    class="text-black text-lg font-bold ml-6"
+                    class="text-black text-lg font-bold"
                     textWrap="true"
                   />
                 </FlexboxLayout>
               </GridLayout>
 
-              <GridLayout columns="*,*" rows="100" class="bottom">
+              <GridLayout
+                columns="230,*"
+                rows="100"
+                class="bottom bg-white rounded-t-3xl rounded-b-3xl mt-2"
+              >
                 <FlexboxLayout col="0" class="bottom items-center ml-5">
+                  <Image
+                    class="livebetter w-10 h-10 mr-2"
+                    src="~/asserts/img/livebetter.png"
+                    stretch="aspectFill"
+                  />
                   <StackLayout>
                     <Label
                       text="Live Better Account"
-                      class="bottom-title text-base text-black font-extrabold uppercase"
+                      class="bottom-title text-base text-blue-700 font-extrabold"
                     />
-                    <Label text="Account Balance" class="text-gray-500 text-base" />
+                    <Label text="Account Balance" class="text-gray-600 text-base" />
                   </StackLayout>
                 </FlexboxLayout>
 
                 <FlexboxLayout col="1" class="bottom-controls items-center">
                   <Label
                     text="R 1000.76"
-                    class="text-black text-lg font-bold ml-6"
+                    class="text-black text-lg font-bold"
                     textWrap="true"
                   />
                 </FlexboxLayout>
@@ -132,7 +150,7 @@ export default {
 
 <style scoped lang="css">
 .carousel-bottoms .bottoms {
-  margin-top: -250px;
+  margin-top: -300px;
 }
 .carousel-bottoms .bottoms-description {
   margin-top: -40px;
