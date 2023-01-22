@@ -1,6 +1,6 @@
 <template>
   <Page class="page view">
-    <ActionBar :currentPage="currentPage" />
+    <ActionBar />
     <GridLayout rows="auto, *" columns="*">
       <StackLayout class="home-page-container">
         <StackLayout class="carousel-bottoms white bg-white">
@@ -88,7 +88,6 @@ import SliderPage from "./SliderPage";
 export default {
   data() {
     return {
-      currentPage: "Capitec",
       accounts: [
         {
           name: "Savings Account",

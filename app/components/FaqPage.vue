@@ -1,6 +1,6 @@
 <template>
   <Page class="page faqs">
-    <ActionBar :currentPage="currentPage" />
+    <ActionBar />
     <StackLayout class="faq-container">
       <ScrollView orientation="vertical" height="auto">
         <StackLayout class="page-wrapper" justifyContent="center" alignItems="center">
@@ -59,7 +59,6 @@ import ActionBar from "./ActionBar";
 export default {
   data() {
     return {
-      currentPage: "BBC FAQS",
       faqs: [
         {
           question: "How safe is my money ?",

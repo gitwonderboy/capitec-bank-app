@@ -52,8 +52,6 @@
 import * as utils from "~/shared/utils";
 
 export default {
-  props: ["currentPage"],
-
   data() {
     return {
       active: "active-icon bg-white p-2 rounded-tl-full rounded-tr-full",

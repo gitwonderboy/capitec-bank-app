@@ -1,6 +1,6 @@
 <template>
   <Page class="page tips">
-    <ActionBar :currentPage="currentPage" />
+    <ActionBar />
     <StackLayout class="tip-container">
       <ScrollView orientation="vertical" height="750">
         <StackLayout class="page-wrapper" justifyContent="center" alignItems="center">
