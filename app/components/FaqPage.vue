@@ -1,9 +1,8 @@
 <template>
   <Page class="page faqs">
     <ActionBar :currentPage="currentPage" />
-    <StackLayout class="page-container">
-      <HeadPage :headTitle="headTitle" :imgSrc="imgSrc" />
-      <ScrollView orientation="vertical" height="750">
+    <StackLayout class="faq-container">
+      <ScrollView orientation="vertical" height="auto">
         <StackLayout class="page-wrapper" justifyContent="center" alignItems="center">
           <StackLayout class="card-container">
             <StackLayout>
@@ -12,7 +11,7 @@
                 :key="faq.id"
                 columns="auto,*"
                 rows="auto,auto"
-                class="commons mb-2 mt-0 faq rounded-xl p-4"
+                class="commons mb-2 mt-0 faq rounded-2xl p-4"
               >
                 <FlexboxLayout
                   col="0"
@@ -26,7 +25,7 @@
                   <Label
                     textWrap="true"
                     :text="faq.question"
-                    class="text-lg text-white leading-none"
+                    class="text-lg text-black leading-none"
                   />
                 </FlexboxLayout>
 
@@ -42,7 +41,7 @@
                   <Label
                     textWrap="true"
                     :text="faq.answer"
-                    class="text-lg text-white leading-none"
+                    class="text-lg text-black leading-none"
                   />
                 </FlexboxLayout>
               </GridLayout>
@@ -56,15 +55,11 @@
 
 <script>
 import ActionBar from "./ActionBar";
-import HeadPage from "./HeadPage";
-import * as utils from "~/shared/utils";
 
 export default {
   data() {
     return {
       currentPage: "BBC FAQS",
-      headTitle: "EXPERTS FORUM",
-      imgSrc: "~/asserts/img/faq.png",
       faqs: [
         {
           question: "How to apply for jobs ?",
@@ -88,29 +83,25 @@ export default {
     };
   },
 
-  methods: {
-    onDrawerButtonTap() {
-      utils.showDrawer();
-    },
-  },
-
   components: {
     ActionBar,
-    HeadPage,
   },
 };
 </script>
 
 <style scoped lang="css">
+.page-wrapper {
+  background-color: #f7f7f7;
+}
 .faqs .faq {
-  background-color: #6b9935;
+  background-color: #ffffff;
 }
 
 .faqs .faq-q {
-  background-color: #795d8e;
+  background-color: #e43d3c;
 }
 
 .faqs .faq-a {
-  background-color: #ffc043;
+  background-color: #004f7a;
 }
 </style>
