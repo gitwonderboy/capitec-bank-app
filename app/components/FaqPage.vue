@@ -62,22 +62,24 @@ export default {
       currentPage: "BBC FAQS",
       faqs: [
         {
-          question: "How to apply for jobs ?",
-          answer: "Visit our website or come to our offices.",
-        },
-        {
-          question: "How can I partner with BBC ?",
-          answer: "Come to our offices for briefing and fill up our forms.",
-        },
-        {
-          question: "What matters the most to BBC ?",
+          question: "How safe is my money ?",
           answer:
-            "Our clients they come before anything, we put a lot amount of time preparing the best for our clients. .",
+            "Very. All branch transactions require your card and PIN, with fingerprint biometrics and photographic identification as additional security measures.",
         },
         {
-          question: "If I get mis treated at BBC shops ?",
+          question: "What's the deal with daily card limits ?",
           answer:
-            "Please let us know in all our social media platforms so we can resolve the issue as soon as possible.",
+            "The following daily card limits apply to keep your money safe. They can instantly be changed on Internet banking or by visiting your nearest branch.",
+        },
+        {
+          question: "What is credit life insurance ?",
+          answer:
+            "Credit insurance is compulsory for all term loans. You might not need it for a credit card or access facility, depending on your personal credit profile.",
+        },
+        {
+          question: "How do I get Global One ?",
+          answer:
+            "Our banking app gives you the control to open your account from anywhere, using just your smartphone. Simply download our app, enter your SA ID number and take a few selfies!",
         },
       ],
     };

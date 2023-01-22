@@ -83,16 +83,12 @@
 
 <script>
 import ActionBar from "./ActionBar";
-import Branch from "./BranchPage";
-import TipFaq from "./TipFaqPage";
 import SliderPage from "./SliderPage";
 
 export default {
   data() {
     return {
       currentPage: "Capitec",
-      Branch: Branch,
-      TipFaq: TipFaq,
       accounts: [
         {
           name: "Savings Account",
@@ -136,8 +132,6 @@ export default {
 
   components: {
     ActionBar,
-    Branch,
-    TipFaq,
     SliderPage,
   },
 };

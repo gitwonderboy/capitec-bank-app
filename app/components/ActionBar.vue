@@ -14,11 +14,7 @@
       </GridLayout>
 
       <GridLayout columns="*, *, *">
-        <FlexboxLayout
-          col="0"
-          class="justify-center items-center"
-          @tap="onNavigationItemTap"
-        >
+        <FlexboxLayout col="0" class="justify-center items-center">
           <StackLayout
             class="inactive-icon fas text-blue-400 mt-3 text-center text-xl font-extrabold"
           >
@@ -29,7 +25,7 @@
         <FlexboxLayout
           col="1"
           class="justify-center items-center"
-          @tap="onNavigationItemTap"
+          @tap="onNavigationItemTap()"
         >
           <StackLayout :class="active">
             <Image class="capiteclogo w-9" src="~/asserts/img/cap-logo.png" />
