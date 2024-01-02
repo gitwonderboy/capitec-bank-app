@@ -1,8 +1,11 @@
 import Vue from 'nativescript-vue'
-import RadSideDrawer from 'nativescript-ui-sidedrawer/vue'
+import { Theme } from "@nativescript/theme";
+import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
 
 //CSS
 import "./app.css";
+
+Theme.setMode(Theme.Light);
 
 Vue.use(RadSideDrawer)
 

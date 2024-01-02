@@ -1,4 +1,4 @@
-import { Frame, Application, setActivityCallbacks } from "@nativescript/core";
+import { Application, setActivityCallbacks } from "@nativescript/core";
 
 const superProto = androidx.appcompat.app.AppCompatActivity.prototype;
 androidx.appcompat.app.AppCompatActivity.extend("org.myApp.MainActivity", {

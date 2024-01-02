@@ -1,3 +1,18 @@
 {
-	"vue3snippets.enable-compile-vue-file-on-did-save-code": true
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": true,
+  "NativescriptExtend.fileAssociations": [
+    {
+      "systemId": "d:\\Devs\\development\\ns\\capitec-bank-app\\schema\\tns.xsd",
+      "pattern": "**/**/*.xml"
+    },
+    {
+      "systemId": "http://www.w3.org/2001/XMLSchema.xsd",
+      "pattern": "d:\\Devs\\development\\ns\\capitec-bank-app\\schema\\tns.xsd"
+    }
+  ],
+  "files.exclude": {
+    "schema": true
+  },
+  "NativescriptExtend.format.enabled": true,
+  "NativescriptExtend.validation.enabled": true
 }

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@nativescript/core": "~8.6.2",
+    "@nativescript/core": "~8.1.0",
     "@nativescript/tailwind": "^2.0.1",
     "@nativescript/theme": "~3.0.2",
     "nativescript-ui-sidedrawer": "~14.2.1",
@@ -13,7 +13,7 @@
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "@nativescript/android": "~8.6.2",
+    "@nativescript/android": "~8.1.0",
     "@nativescript/webpack": "~5.0.0",
     "nativescript-vue-template-compiler": "~2.9.2"
   }
